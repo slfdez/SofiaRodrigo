@@ -263,6 +263,12 @@
                 <div class="item"><img src="Slideshow/810_4312.jpg" alt="Image 34"></div>
                 <div class="item"><img src="Slideshow/810_4316.jpg" alt="Image 35"></div>
             </div>
+            
+        </div>
+        <br><br>
+        <div class="button-container">
+            <button class="prev">Previo</button>
+            <button class="next">Siguiente</button>
         </div>
     </div>
 
@@ -554,7 +560,7 @@
             $(".owl-carousel").owlCarousel({
                 loop:true,
                 margin:10,
-                nav:true,
+                nav:false,
                 responsive:{
                     0:{
                         items:1
@@ -568,6 +574,28 @@
                 }
             });
         });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+    
+        $('.next').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+    
+        $('.prev').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        });
+    });
     </script>
 
 </body>

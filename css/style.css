@@ -2597,6 +2597,26 @@ overflow: hidden !important;
     }
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.prev, button.next {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Espaciado entre los botones */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #ddd;
+}
+
+
 
 /* =======  Overlay Effect Bg image  ======= */
 [data-overlay-dark],
